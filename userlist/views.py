@@ -8,5 +8,8 @@ class UsersListCreateView(APIView):
     def get(self, *args, **kwargs):
         with open('users.json') as file:
             return Response(json.load(file))
+
     def post(self,*args,**kwargs):
+        with open('users.json'):
+            return
 
