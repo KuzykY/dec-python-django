@@ -4,5 +4,6 @@ from .views import CarListCreateView, CarRetrieveUpdateDestroyView
 
 urlpatterns = [
     path('', CarListCreateView.as_view()),
-    path('/<int:pk>', CarRetrieveUpdateDestroyView.as_view())
+    path('/<int:pk>', CarRetrieveUpdateDestroyView.as_view()),
+    path('?autoParkId=<int:autoParkId>', CarListCreateView.as_view())
 ]

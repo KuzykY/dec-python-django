@@ -9,16 +9,10 @@ class CarListCreateView(ListCreateAPIView):
     queryset = CarModel.objects.all()
 
     def get_queryset(self):
-        autoParkId = self.request.query_params.get('autoParkId')
+        autoParkId = self.request.query_params.get('autoParkId', None)
         if autoParkId:
-            return self.queryset.filter(autoParkId=autoParkId)
+            return self.queryset.filter(auto_park_id=autoParkId)
         return super().get_queryset()
-
-    # def get_queryset(self):
-    #     autoParkId = self.request.query_params.get('autoParkId')
-    #     if autoParkId:
-    #         return self.queryset.filter(autoParkId=autoParkId)
-    #     return super().get_queryset()
 
 
 class CarRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
