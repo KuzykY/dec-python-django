@@ -6,5 +6,4 @@ urlpatterns = [
     path('', AutoParkListCreateView.as_view()),
     path('/<int:pk>', AutoParkRetrieveDestroyView.as_view()),
     path('/<int:pk>/cars', AutoParkAddCarView.as_view()),
-
 ]
