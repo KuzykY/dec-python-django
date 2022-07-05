@@ -23,8 +23,8 @@ class ProfileModel(models.Model):
     class Meta:
         db_table = 'profile'
 
-    name = models.CharField(max_length=25)
-    surname = models.CharField(max_length=25)
+    name = models.CharField(max_length=100)
+    surname = models.CharField(max_length=100)
     age = models.IntegerField()
-    phone = models.IntegerField(max_length=10)
+    phone = models.CharField(max_length=10)
     user = models.OneToOneField(UserModel, on_delete=models.CASCADE, related_name='profile')
