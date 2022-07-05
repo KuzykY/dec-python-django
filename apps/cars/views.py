@@ -1,7 +1,7 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-from .serializers import CarSerializer
 from .models import CarModel
+from .serializers import CarSerializer
 
 
 class CarListCreateView(ListCreateAPIView):
