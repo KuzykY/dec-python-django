@@ -12,6 +12,7 @@ pytz = "==2022.1"
 sqlparse = "==0.4.2"
 tzdata = "==2022.1"
 djangorestframework-simplejwt = "*"
+pillow = "*"
 
 [dev-packages]
 isort = "*"
