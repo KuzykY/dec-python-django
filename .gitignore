@@ -1,5 +1,5 @@
 .idea
 venv
 Pipfile.lock
-.env
 storage
+.env
