@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny
 
 from .models import CarModel
 from .serializers import CarSerializer
-from permissions.user_permissions import IsSuperUser
+from core.permissions.user_permissions import IsSuperUser
 
 
 class CarListCreateView(ListCreateAPIView):

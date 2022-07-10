@@ -1,9 +1,12 @@
+
 from typing import Type
 
 from django.contrib.auth import get_user_model
 from django.db import transaction
 
 from rest_framework.serializers import ModelSerializer, ValidationError
+
+from core.services.email_services import EmailService
 
 from .models import ProfileModel, UserModel
 
@@ -51,4 +54,5 @@ class UserSerializer(ModelSerializer):
         profile = validated_data.pop('profile')
         user = UserModel.objects.create_user(**validated_data)
         ProfileModel.objects.create(**profile, user=user)
+        EmailService.register_email(user)
         return user
