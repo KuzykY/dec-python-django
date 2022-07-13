@@ -7,6 +7,7 @@ from .enums import RegEx
 class AutoParkModel(models.Model):
     class Meta:
         db_table = 'autopark'
+        ordering = ['id']
 
     name = models.CharField(max_length=100, validators=[RegexValidator(RegEx.NAME.pattern, RegEx.NAME.msg)])
     created_at = models.DateTimeField(auto_now_add=True)
