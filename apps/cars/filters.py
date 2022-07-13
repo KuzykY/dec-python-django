@@ -9,7 +9,7 @@ class CarFilter(filters.FilterSet):
     price_gte = filters.NumberFilter(field_name='price', lookup_expr='gte')
     brand_start = filters.CharFilter(field_name='brand', lookup_expr='istartswith')
     brand_end = filters.CharFilter(field_name='brand', lookup_expr='iendswith')
-    brand_iexact = filters.CharFilter(field_name='brand', lookup_expr='iexact')
+    brand_iregex = filters.CharFilter(field_name='brand', lookup_expr='iregex')
 
     class Meta:
         model = CarModel
