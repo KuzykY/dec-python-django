@@ -4,18 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-asgiref = "==3.5.2"
-django = "==4.0.5"
-djangorestframework = "==3.13.1"
-mysqlclient = "==2.1.1"
-pytz = "==2022.1"
-sqlparse = "==0.4.2"
-tzdata = "==2022.1"
-djangorestframework-simplejwt = "*"
-pillow = "*"
-django-dotenv = "*"
-response = "*"
+djangorestframework = "*"
+mysqlclient = "*"
+django-cors-headers = "*"
 django-filter = "*"
+pillow = "*"
+djangorestframework-simplejwt = "*"
+drf-yasg2 = "*"
 
 [dev-packages]
 isort = "*"
