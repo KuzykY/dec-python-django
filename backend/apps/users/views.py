@@ -13,6 +13,7 @@ UserModel = get_user_model()
 
 
 class UserListCreateView(ListCreateAPIView):
+    """Get Users"""
     serializer_class = UserSerializer
     queryset = UserModel.objects.all()
     permission_classes = (AllowAny,)
