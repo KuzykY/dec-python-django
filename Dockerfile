@@ -23,5 +23,5 @@ COPY ./Pipfile /tmp/
 RUN cd /tmp \
     && pip install --upgrade pip\
     && pip install --user pipenv\
-    && pipenv lock --pre --requirements > requirements.txt\
+    && pipenv lock  --requirements > requirements.txt\
     && pip install --user -r requirements.txt
