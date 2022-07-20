@@ -11,6 +11,7 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'core.handlers.error_handler.custom_error_handler',
     'DEFAULT_PAGINATION_CLASS': 'core.paginations.page_pagination.PagePagination',
     'DEFAULT_FILTER_BACKENDS': (
-        'django_filters.rest_framework.DjangoFilterBackend',)
+        'django_filters.rest_framework.DjangoFilterBackend',),
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
 
 }
