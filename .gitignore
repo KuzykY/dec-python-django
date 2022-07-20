@@ -1,7 +1,6 @@
 .idea
+.venv
 Pipfile.lock
 .env
 storage
-/.venv/
-/mysql_db/
-
+mysql_db
