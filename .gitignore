@@ -4,3 +4,4 @@ Pipfile.lock
 storage
 /.venv/
 /mysql_db/
+
