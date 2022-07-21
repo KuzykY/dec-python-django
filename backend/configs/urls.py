@@ -28,6 +28,7 @@ urlpatterns = [
     path('auth', include('apps.auth.urls')),
     path('doc',schema_view.with_ui('swagger',cache_timeout=0))
 ]
+
 # handler500 = 'rest_framework.exceptions.server_error'
 # handler400 = 'rest_framework.exceptions.bad_request'
 
