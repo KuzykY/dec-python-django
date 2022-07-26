@@ -1,9 +1,8 @@
 FROM python:3.10-alpine
 
-MAINTAINER KuzykY
+MAINTAINER Me
 
 ENV PYTHONUNBUFFERED=1
-
 
 RUN apk add --no-cache --virtual ..build-deps gcc musl-dev mariadb-dev
 #for Pillow
@@ -18,10 +17,12 @@ USER user
 
 ENV PATH="/home/user/.local/bin:${PATH}"
 
-COPY ./Pipfile /tmp/
+COPY Pipfile /tmp/
 
 RUN cd /tmp \
     && pip install --upgrade pip\
     && pip install --user pipenv\
-    && pipenv lock  --requirements > requirements.txt\
+    && pipenv lock --requirements > requirements.txt\
     && pip install --user -r requirements.txt
+
+

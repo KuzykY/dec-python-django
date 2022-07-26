@@ -5,12 +5,11 @@ name = "pypi"
 
 [packages]
 djangorestframework = "*"
-mysqlclient = "*"
-django = "==4.0.5"
 django-cors-headers = "*"
-django-filter = "*"
-pillow = "*"
+mysqlclient = "*"
 djangorestframework-simplejwt = "*"
+pillow = "*"
+django-filter = "*"
 drf-yasg2 = "*"
 celery = "*"
 redis = "*"
@@ -18,7 +17,6 @@ django-celery-results = "*"
 django-celery-beat = "*"
 
 [dev-packages]
-isort = "*"
 
 [requires]
 python_version = "3.10"

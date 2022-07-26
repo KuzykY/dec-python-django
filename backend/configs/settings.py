@@ -26,18 +26,18 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get('DEBUG') == 'True' else False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:4200",
+# ]
+CORS_ALLOW_ALL_ORIGINS=True
 
 AUTH_USER_MODEL = 'users.UserModel'
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
